@@ -24,7 +24,7 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D coll)
     {
-        gameStatus.AddToScore();
+        FindObjectOfType<GameStatus>().AddToScore();
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         /* Using PlayOneShot would not play the break sound since the block would
          * have been destroyed and so would the AudioSource.
