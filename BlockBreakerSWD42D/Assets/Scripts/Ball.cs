@@ -29,6 +29,7 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        myPaddle = FindObjectOfType<Paddle>();
         paddleToBallDistance = this.transform.position - myPaddle.transform.position;
     }
 
